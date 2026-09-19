@@ -5,21 +5,21 @@
 class Fleet < Formula
   desc "Set up, run and supervise a fleet of coding agents against one GitHub repository"
   homepage "https://github.com/noelzappy/fleet"
-  version "0.1.3"
+  version "0.1.4"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/noelzappy/fleet/releases/download/v0.1.3/fleet_0.1.3_darwin_amd64.tar.gz"
-      sha256 "bbe04a30a026923e0f4837f4b83f89b70b1199eac1d1db70e7191300ff4ff4b7"
+      url "https://github.com/noelzappy/fleet/releases/download/v0.1.4/fleet_0.1.4_darwin_amd64.tar.gz"
+      sha256 "4217bd81fce089f0c82adf80639f9635c78486620afcea3b5e53a0e1887f249a"
 
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/noelzappy/fleet/releases/download/v0.1.3/fleet_0.1.3_darwin_arm64.tar.gz"
-      sha256 "5ea3487758d91def3b46e1b52221e6d6b147cd19a4bb9347735304aaadfc4ca5"
+      url "https://github.com/noelzappy/fleet/releases/download/v0.1.4/fleet_0.1.4_darwin_arm64.tar.gz"
+      sha256 "1754d6356c531664894a30c59566d144db0b6b7c9e1202c28b303092d01b1922"
 
       define_method(:install) do
         bin.install "fleet"
@@ -29,15 +29,15 @@ class Fleet < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noelzappy/fleet/releases/download/v0.1.3/fleet_0.1.3_linux_amd64.tar.gz"
-      sha256 "f81281f2d3fe6bc7a16a02d2b9501d65b5750f1b4e1a1346b2f51a8e5d797ff7"
+      url "https://github.com/noelzappy/fleet/releases/download/v0.1.4/fleet_0.1.4_linux_amd64.tar.gz"
+      sha256 "e92de732a5a140a621bd80ce25eed218e8a8c8696e2b6007209f963291999872"
       define_method(:install) do
         bin.install "fleet"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/noelzappy/fleet/releases/download/v0.1.3/fleet_0.1.3_linux_arm64.tar.gz"
-      sha256 "e03e9fbdab68da3983c77444a8f281026e3e17120f4e2782530aeb978ed489e6"
+      url "https://github.com/noelzappy/fleet/releases/download/v0.1.4/fleet_0.1.4_linux_arm64.tar.gz"
+      sha256 "7c7cabeb9c5f702d01bcdd2309bba8bf32ff24fdaa2bc45612bd2d1cc48347f8"
       define_method(:install) do
         bin.install "fleet"
       end
